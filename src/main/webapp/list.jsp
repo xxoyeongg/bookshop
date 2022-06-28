@@ -26,6 +26,8 @@
   Connection conn =null;
   Statement stmt= null;
   
+  int level=0;
+  
   try{
 	  Class.forName("org.mariadb.jdbc.Driver");//org.mariadb.jdbc.Driver com.mysql.jdbc.Driver
 	  conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/board","java","java");
@@ -37,10 +39,12 @@
   stmt=conn.createStatement();
   String sql = "SELECT * FROM message ORDER BY id ASC";
   ResultSet rs=stmt.executeQuery(sql);
+ 
   
   if(rs != null){
 	  while(rs.next()){
 		  int id = Integer.parseInt(rs.getString("id"));
+			level=(Integer)session.getAttribute("level");
 		  
  %>
  <tr>
@@ -59,7 +63,14 @@
   %>
   
  </table>
- <a href="write.jsp">게시글 쓰기</a>
+ <!-- 레벨이 2가 아니면 -->
+ <%if(level !=2){%>
+	 <a href="write.jsp">게시글 쓰기</a>
+
+<%}%>
+
+ <!-- <a href="write.jsp">게시글 쓰기</a>-->
+ 
  <%
  if(stmt != null)
 	 stmt.close();
