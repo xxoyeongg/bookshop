@@ -64,7 +64,7 @@ while(rs.next()){
 </tr> 
 
 <tr>
- <td>작성날짜</td>
+ <td>이메일</td>
  <td><%=email %></td>
 </tr> 
 
