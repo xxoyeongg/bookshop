@@ -26,7 +26,7 @@ Connection conn=null;
 Statement stmt= null;
 
 try{
-	  Class.forName("org.mariadb.jdbc.Driver");//org.mariadb.jdbc.Driver com.mysql.jdbc.Driver
+	 Class.forName("org.mariadb.jdbc.Driver");//org.mariadb.jdbc.Driver com.mysql.jdbc.Driver
 	  conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/board","java","java");
 }catch(Exception e){
 	  out.println("데이터 베이스 접속에 문제가 있습니다. <hr>");
