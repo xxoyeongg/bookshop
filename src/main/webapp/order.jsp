@@ -22,7 +22,7 @@
  	<input type="submit" value="검색">
  </form>
  
- <%
+ <%//
  	String title = request.getParameter("title");
  
  if(title != null){

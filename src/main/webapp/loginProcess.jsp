@@ -15,7 +15,7 @@ String sql = "SELECT * FROM board_user WHERE id=?";
 
 
 
-try {
+try {//
 	//1.데이터 베이스 (mariaDB)드라이버 로드
 	Class.forName("org.mariadb.jdbc.Driver");
 	//2.드라이버 매니저 연결 + 커넥션 객체 생성 

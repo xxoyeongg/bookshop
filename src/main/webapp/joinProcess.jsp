@@ -6,6 +6,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
     <%
+    //
     request.setCharacterEncoding("UTF-8");
     String id =request.getParameter("id");
     String name=request.getParameter("name");

@@ -43,7 +43,7 @@ input{
               <input type="text" id="id" name="id" placeholder="ID" >
        <br><br>
           <button type="submit" class="btn_login"  >로그인</button> <br>
-            계정이 없으신가요? -><a href="joinForm.jsp">회원가입</a>
+            계정이 없으신가요?--><a href="joinForm.jsp">회원가입</a>
             </div>
 
       

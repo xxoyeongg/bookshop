@@ -13,6 +13,7 @@
 </head>
 <body>
 <%
+//
 String name,email,subjects,memo,time;
 name= request.getParameter("name");
 email=request.getParameter("email");

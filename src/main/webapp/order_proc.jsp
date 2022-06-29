@@ -15,6 +15,7 @@ if(ids!=null){
 %>
 <%@page import="java.sql.*" %>
 <%
+//
 Class.forName("org.mariadb.jdbc.Driver");//org.mariadb.jdbc.Driver com.mysql.jdbc.Driver
 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/book_db","java","java");
 Statement stmt = conn.createStatement();

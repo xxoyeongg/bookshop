@@ -41,6 +41,6 @@
 <input type="reset" value="다시 쓰기">
 </form>
 <!--  level 2는 안보이게 -->
-<a href="list.jsp">게시글 리스트 보기</a>
+<a href="list.jsp">게시글 리스트 보기!</a>
 </body>
 </html>
