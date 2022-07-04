@@ -9,4 +9,27 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+ <!-- MariaDB --> 
+ 
+   <context-param>
+  	<param-name>Driver</param-name>
+  	<param-value>org.mariadb.jdbc.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>mariaURL</param-name>
+  	<param-value>jdbc:mariadb:thin:@119.194.24.220:1521:XE</param-value>
+  </context-param>
+  
+   <context-param>
+  	<param-name>mariaID</param-name>
+  	<param-value>java</param-value>
+  </context-param>
+  
+   <context-param>
+  	<param-name>mariaPass</param-name>
+  	<param-value>java</param-value>
+  </context-param>
+  
 </web-app>

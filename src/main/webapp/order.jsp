@@ -6,7 +6,19 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%
+    
+String name=(String)session.getAttribute("name");
+int level=(int)session.getAttribute("level");
+%>
+<%
+if(level==1){ %>
+	<script>
+	alert('level 2이상 부터 가능하세요');
+	location.href='main.jsp';
+	</script>
+<%}%>
     
 <!DOCTYPE html>
 <html>
@@ -16,6 +28,7 @@
 </head>
 <body>
  <h1>인터넷 프로그래머 문고</h1>
+ <p><%=name %>님 안녕하세요</p>
  <h3>제목을 입력 하세요</h3>
  <form method="post">
  	책 제목: <input type="text" name="title"> <br>
@@ -23,7 +36,7 @@
  </form>
  
  <%//
- 	String title = request.getParameter("title");
+ String title = request.getParameter("title");
  
  if(title != null){
  %>
@@ -39,6 +52,7 @@
  %>
  <hr>
  <form action="order_proc.jsp" method="post">
+
 
  <table border="1" cellpadding=5>
  <tr>
@@ -63,9 +77,12 @@
  } 
  %>
  </table>
+ <%if(level !=2 ){%>
  <br> <input type="submit" value="주문"> <input type="reset" value="초기화">
+ <%} %>
  </form>
  <a href="<%=request.getRequestURI() %>"> 다시주문하기</a>
+ <a id="atag" href="main.jsp">메인페이지</a>
  <%
  
  rs.close();
