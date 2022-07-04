@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-
+//
 String subjects="",memo="",name="",time="",email="";
 int id =Integer.parseInt(request.getParameter("id"));
 
