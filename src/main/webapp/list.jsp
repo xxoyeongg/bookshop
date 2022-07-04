@@ -4,7 +4,20 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%
+    
+String Username=(String)session.getAttribute("name"); //로그인한 아이디
+int level=(int)session.getAttribute("level");
+%>
+<%
+if(level==1){ %>
+	<script>
+	alert('level 2이상 부터 가능하세요');
+	location.href='main.jsp';
+	</script>
+<%}%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +40,6 @@
   Connection conn =null;
   Statement stmt= null;
   
-  int level=0;
   
   try{
 	  Class.forName("org.mariadb.jdbc.Driver");//org.mariadb.jdbc.Driver com.mysql.jdbc.Driver
@@ -46,6 +58,7 @@
 	  while(rs.next()){
 		  int id = Integer.parseInt(rs.getString("id"));
 			level=(Integer)session.getAttribute("level");
+			
 		  
  %>
  <tr>
@@ -56,6 +69,9 @@
 	<td><%=rs.getString("name") %></td>
 	<td><%=rs.getString("time") %></td>
      <td><%=rs.getString("email") %></td>
+      <%if(Username.equals(rs.getString("name"))){%>
+		<td><button>삭제</button></td>
+	<%}%>
     </tr>
     <% 
  	
@@ -70,7 +86,10 @@
 
 <%}%>
 
- <!-- <a href="write.jsp">게시글 쓰기</a>-->
+
+
+
+ <a href="main.jsp">메인으로 가기</a>
  
  <%
  if(stmt != null)

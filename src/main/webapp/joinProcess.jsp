@@ -9,7 +9,9 @@
     //
     request.setCharacterEncoding("UTF-8");
     String id =request.getParameter("id");
+    String pass=request.getParameter("pass");
     String name=request.getParameter("name");
+    String email=request.getParameter("email");
     int level=1;
    
     String driver = "org.mariadb.jdbc.Driver";
@@ -19,7 +21,7 @@
     Connection conn =  DriverManager.getConnection(url,"java","java");      
     Statement stmt = conn.createStatement();   
     
-    String insertsql = "INSERT INTO board_user(id,name,level) VALUES('"+id+"','"+name+"','"+level+"')";
+    String insertsql = "INSERT INTO board_user(id,pass,name,email,level) VALUES('"+id+"','"+pass+"','"+name+"','"+email+"','"+level+"')";
     String sql = "SELECT * From board_user";   
     stmt.executeQuery(insertsql);
     ResultSet rs = stmt.executeQuery(sql);      

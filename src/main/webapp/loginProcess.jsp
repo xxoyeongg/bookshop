@@ -32,7 +32,9 @@ try {//
 		
 		session.setAttribute("id", rs.getString(1));
 		session.setAttribute("name", rs.getString(2));
-		session.setAttribute("level", rs.getInt(3));
+		session.setAttribute("pass", rs.getString(3));
+		session.setAttribute("level", rs.getInt(4));
+		session.setAttribute("email", rs.getString(5));
 		response.sendRedirect("main.jsp");
 			
 	}

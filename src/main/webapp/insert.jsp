@@ -1,3 +1,5 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.ResultSet"%>
@@ -13,13 +15,15 @@
 </head>
 <body>
 <%
+
+String name=(String)session.getAttribute("name");
+String email=(String)session.getAttribute("email");
 //
-String name,email,subjects,memo,time;
-name= request.getParameter("name");
-email=request.getParameter("email");
-time=request.getParameter("time");
+String subjects,memo,time;
+
 subjects=request.getParameter("subjects");
 memo=request.getParameter("memo");
+
 
 ResultSet rs= null;
 String sql;
@@ -38,7 +42,7 @@ stmt=conn.createStatement();
 
 sql="insert into message"+
 "(subjects,name,time,memo,email)"+
-"values("+"'"+subjects+"','"+name+"','"+time+"','"+memo+"','"+email+"');";
+"values("+"'"+subjects+"','"+name+"',now(),'"+memo+"','"+email+"');";
 try{
 	stmt.executeUpdate(sql);
 }catch(Exception e){
