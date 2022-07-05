@@ -33,28 +33,32 @@ if(session.getAttribute("id")!=null){
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+h2{padding: 20px;}
 
   #nav1{text-align:center}
 #nav1>ul{display:inline-block}
 #nav1>ul li{float:left;padding:0 30px;line-height:80px}
      
-*{padding:0;margin:0}
+*{padding:0;margin:0;
+text-align: center;
+}
 ul,ol{list-style:none}
 a{text-decoration:none;color:#fff;font-size:15px}
 nav{width:80%;overflow:hidden;height:80px;background-color:#1b2035;margin:50px auto}
 
 #atag{
-
-background-color: navy;
+border-radius: 5px;
+text-decoration: none;
+color: white;
+background-color: black;
 }
 
 </style>
 </head>
 <body>
-<h3>ebook shop</h3>
-<h3><%=name%>로 로그인 하였습니다.</h3>
-
+<h2>ebook shop</h2>
 <hr>
+<h4><%=name%>로 로그인 하였습니다.</h4>
    <nav id="nav1">
       <ul>
         <li><a href="order.jsp">주문</a></li>
@@ -63,7 +67,6 @@ background-color: navy;
 
       </ul>
     </nav>
-<a id="atag" href="loginForm.jsp">로그인페이지 가기</a>
 <a id="atag" href="logout.jsp">로그아웃</a>
 
 </body>

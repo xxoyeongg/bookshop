@@ -5,6 +5,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+
+fieldset{
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  width: 300px;
+  height: 300px;
+}
+input{
+  width: 100%;
+  height: 20px;
+}
+
+.btn_join{
+  width: 35%;
+  height: 30px;
+  margin:20px;
+  position: relative;
+  left: 10px;
+}
+</style>
 </head>
 <body>
 <form name="joinForm" action="joinProcess.jsp" method="post">
@@ -27,7 +49,7 @@
 
 
 
-<input type="reset" value="다시 작성하기 "><input type="submit" value=" 완료 ">
+<input type="reset" value="다시 작성하기 " class="btn_join"><input type="submit" value=" 완료 " class="btn_join">
 
 </fieldset>
 
