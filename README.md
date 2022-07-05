@@ -1,5 +1,23 @@
 # bookshop
+version1
 
+도서정보 Database(book_db) - (Table)book_table 
+
+게시판 구현 Database(board) - (Table)message 
+
+
+version2
+
+회원인증 구현 
+
+Database(board) - (Table)board_user
+
+아이디,비밀번호,이메일 입력 
+회원가입시 level 1 
+
+
+
+version3
 메인 페이지에서 
 주문 , 게시판 페이지로 이동할수있게함
 
@@ -16,3 +34,9 @@
 --0704 
 
 게시글 작성시 작성자, 작성날짜 자동입력
+
+--0705
+
+마이페이지에서 본인이 작성한글 확인 가능 -> 제목 클릭시 게시글 리스트로 가게끔 구현
+
+리스트에서 본인이 작성한글에 대해서 삭제 버튼 나오게 구현 -> 삭제 
