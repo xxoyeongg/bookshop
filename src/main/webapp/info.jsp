@@ -29,7 +29,7 @@ int level=(int)session.getAttribute("level");
   width: 400px; height: 500px;
   border: 1px solid black;
   position: relative;
-  left: 400px; top: 50px;
+  left: 200px; top: 50px;
 }
 
 #imgbox{
