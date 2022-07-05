@@ -62,6 +62,21 @@ table.type04 td {
   border-bottom: 1px solid #ccc;
 }
 
+li{
+padding:3px;
+margin: 5px;
+position: relative;
+left: 10px;
+}
+
+#atag{
+border-radius: 5px;
+text-decoration: none;
+color: white;
+background-color: black;
+position: relative;
+top: 80px;
+ }
 
   </style>
   
@@ -70,7 +85,7 @@ table.type04 td {
   <div class="container">
 <div id="imgbox">
 
-  <img src="" alt="">
+  <img src="" alt="이미지 들어갈곳">
 </div>
 
 
@@ -101,20 +116,22 @@ table.type04 td {
  ResultSet rs = stmt.executeQuery(sqlStr);
  
  %>
- <table>
+
   <%
  while (rs.next()){
+	 
 	 String username = rs.getString("name");
  %>
- 	
+ 	<li>
  		<a href=list.jsp?name=<%=name %>>
  		 	<%=rs.getString("subjects") %></a>
- 	 </td>
+ 	 </li>
  <%
  } 
  %>
-</table>
+
 <a id="atag" href="main.jsp">메인페이지</a>
+<a id="atag" href="logout.jsp">로그아웃</a>
   </div>
   
 </body>

@@ -18,17 +18,17 @@
   </context-param>
   
   <context-param>
-  	<param-name>mariaURL</param-name>
-  	<param-value>jdbc:mariadb:thin:@119.194.24.220:1521:XE</param-value>
+  	<param-name>URL</param-name>
+  	<param-value>jdbc:mariadb://localhost:3306//board</param-value>
   </context-param>
   
    <context-param>
-  	<param-name>mariaID</param-name>
+  	<param-name>ID</param-name>
   	<param-value>java</param-value>
   </context-param>
   
    <context-param>
-  	<param-name>mariaPass</param-name>
+  	<param-name>Pass</param-name>
   	<param-value>java</param-value>
   </context-param>
   

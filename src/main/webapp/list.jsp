@@ -70,7 +70,7 @@ if(level==1){ %>
 	<td><%=rs.getString("time") %></td>
      <td><%=rs.getString("email") %></td>
       <%if(Username.equals(rs.getString("name"))){%>
-		<td><button>삭제</button></td>
+		<td><a href="board_delete.jsp?id=<%=id%>">삭제</a></td>
 	<%}%>
     </tr>
     <% 
@@ -90,6 +90,7 @@ if(level==1){ %>
 
 
  <a href="main.jsp">메인으로 가기</a>
+ <a id="atag" href="logout.jsp">로그아웃</a>
  
  <%
  if(stmt != null)
