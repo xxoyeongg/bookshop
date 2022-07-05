@@ -23,16 +23,38 @@ if(level==1){ %>
 <head>
 <meta charset="UTF-8">
 <title>게시판</title>
+<style type="text/css">
+*{margin: 30px auto;
+text-align: center;}
+
+a{text-decoration:none; font-size:15px}
+table{
+width:80%; height:80px;
+overflow:hidden;margin:50px auto
+}
+table>td{
+display:inline-block
+float:left;
+padding:0 30px;
+line-height:80px
+;}
+th{
+color:#fff;font-size:15px;
+background-color:#1b2035;
+
+}
+
+</style>
 </head>
 <body>
  <h3>게시글 리스트</h3>
- <table border="2">
+ <table>
  <tr>
-  <td>번호</td>
-  <td>제목</td>
-  <td>작성자</td>
-  <td>날짜</td>
-  <td>이메일</td>
+  <th>번호</th>
+  <th>제목</th>
+  <th>작성자</th>
+  <th>날짜</th>
+  <th>이메일</th>
   </tr>
   
   <%
