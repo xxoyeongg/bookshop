@@ -65,7 +65,6 @@ mvc 패턴으로 제작 해보고 싶습니다
 ![008](https://user-images.githubusercontent.com/101491440/184266152-e04b7322-4728-4320-87d9-f996e82ba0b5.png)
 ![009](https://user-images.githubusercontent.com/101491440/184266154-5d81e8cd-f8c5-4d84-bfa6-78e88bc55b7c.png)
 ![010](https://user-images.githubusercontent.com/101491440/184266155-41430c56-da5d-42ca-88d7-b791c559cd97.png)
-![011](https://user-images.githubusercontent.com/101491440/184266156-950f7a76-51c9-44b3-8bf6-42efbc43fcd7.png)
 ![012](https://user-images.githubusercontent.com/101491440/184266158-1ccc0bd5-ce6a-42d4-916f-2b926aa1feb1.png)
 
 
