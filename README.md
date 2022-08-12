@@ -1,12 +1,13 @@
-# bookshop
-version1
+# 온라인 서점
+## bookshop
+### ➡️version1 (공통기능 구현)
 
 도서정보 Database(book_db) - (Table)book_table 
 
 게시판 구현 Database(board) - (Table)message 
 
 
-version2
+### ➡️version2
 
 회원인증 구현 
 
@@ -17,7 +18,7 @@ Database(board) - (Table)board_user
 
 
 
-version3
+### ➡️version3
 메인 페이지에서 
 주문 , 게시판 페이지로 이동할수있게함
 
@@ -40,3 +41,8 @@ version3
 마이페이지에서 본인이 작성한글 확인 가능 -> 제목 클릭시 게시글 리스트로 가게끔 구현
 
 리스트에서 본인이 작성한글에 대해서 삭제 버튼 나오게 구현 -> 삭제 
+
+
+## 향후계획
+<hr>
+mvc 패턴으로 제작 해보고 싶습니다.
